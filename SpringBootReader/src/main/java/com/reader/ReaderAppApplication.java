@@ -90,8 +90,4 @@ public class ReaderAppApplication implements CommandLineRunner {
         long endTimeWrite = System.currentTimeMillis();
         log.info("-> Write finished, time " + (endTimeWrite - startTimeWrite) + " ms");
     }
-
-    public synchronized void insertData(List<Customer> customers) {
-        this.customerRepository.saveAll(customers);
-    }
 }
